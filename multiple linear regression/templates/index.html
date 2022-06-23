@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>car price prediction model</title>
+
+<link rel="stylesheet" href="static/style1.css">
+  
+</head>
+
+<body>
+
+ <div class="login">
+  <h1>Prediction of car price</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="wheelbase" placeholder="Enter the car wheelbase" required="required" />
+      <input type="text" name="carlength" placeholder="Enter the car length" required="required" />
+      <input type="text" name="carwidth	" placeholder="Enter the car width" required="required" />
+      <input type="text" name="cylindernumber" placeholder="Enter the no of cylinders" required="required" />
+      <input type="text" name="carheight" placeholder="Enter the car heigth" required="required" />
+      <input type="text" name="enginesize" placeholder="Enter the car engine cc" required="required" />
+      <input type="text" name="horsepower" placeholder="Enter the horsepower" required="required" />
+    <br>
+        <button class="jeeet" type="submit" class="btn btn-primary btn-block btn-large">Predict car price</button>
+        
+    </form>
+
+   <br>
+   {{ prediction_text }}
+   <br>
+
+ </div>
+
+<footer>
+  <div class="text">
+    <span>Created By <a href="https:mail.to:asswin2207@gmail.com">Asswin CB </a> | &copy; </span>
+  </div>
+</footer>
+</body>
+</html>
